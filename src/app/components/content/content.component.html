@@ -49,11 +49,59 @@
   </mat-form-field>
 
   <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-    <mat-tab label="Identificación">Identificación</mat-tab>
-    <mat-tab label="Comprobante">Comprobante</mat-tab>
-    <mat-tab label="Propiedad">Propiedad</mat-tab>
-    <mat-tab label="Contrato">Contrato</mat-tab>
-    <mat-tab label="Contacto">Contacto</mat-tab>
-    <mat-tab label="Fotografía">Fotografía</mat-tab>
+    <mat-tab label="Identificación">
+      <div class="tab-content">
+        <app-image
+          *ngFor="let dataImage of dataTabsImages.tab1; index as i"
+          [imageUrl]="dataImage.imageUrl"
+          [altText]="dataImage.altText">
+        </app-image>
+      </div>
+    </mat-tab>
+    <mat-tab label="Comprobante">
+      <div class="tab-content">
+        <app-image
+          *ngFor="let dataImage of dataTabsImages.tab2; index as i"
+          [imageUrl]="dataImage.imageUrl"
+          [altText]="dataImage.altText">
+        </app-image>
+      </div>
+    </mat-tab>
+    <mat-tab label="Propiedad">
+      <div class="tab-content">
+        <app-image
+          *ngFor="let dataImage of dataTabsImages.tab3; index as i"
+          [imageUrl]="dataImage.imageUrl"
+          [altText]="dataImage.altText">
+        </app-image>
+      </div>
+    </mat-tab>
+    <mat-tab label="Contrato">
+      <div class="tab-content">
+        <app-image
+          *ngFor="let dataImage of dataTabsImages.tab4; index as i"
+          [imageUrl]="dataImage.imageUrl"
+          [altText]="dataImage.altText">
+        </app-image>
+      </div>
+    </mat-tab>
+    <mat-tab label="Contacto">
+      <div class="tab-content">
+        <app-image
+          *ngFor="let dataImage of dataTabsImages.tab5; index as i"
+          [imageUrl]="dataImage.imageUrl"
+          [altText]="dataImage.altText">
+        </app-image>
+      </div>
+    </mat-tab>
+    <mat-tab label="Fotografía">
+      <div class="tab-content">
+        <app-image
+          *ngFor="let dataImage of dataTabsImages.tab6; index as i"
+          [imageUrl]="dataImage.imageUrl"
+          [altText]="dataImage.altText">
+        </app-image>
+      </div>
+    </mat-tab>
   </mat-tab-group>
 </div>
