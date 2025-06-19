@@ -37,3 +37,14 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+
+<div class="container">
+  <mat-form-field>
+    <mat-label>Expediente</mat-label>
+    <mat-select>
+      <mat-option value="exp_credito">Expediente Crédito</mat-option>
+      <mat-option value="exp_capacitacion">Expediente Capacitacion</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

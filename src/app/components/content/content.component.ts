@@ -1,12 +1,23 @@
 import { Component } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { MatSelectModule } from "@angular/material/select";
 import { MatTableModule } from "@angular/material/table";
 
 @Component({
 	selector: "app-content",
 	templateUrl: "./content.component.html",
 	styleUrl: "./content.component.scss",
-	imports: [MatTableModule, MatButtonModule],
+	imports: [
+		MatTableModule,
+		MatButtonModule,
+		MatFormFieldModule,
+		MatSelectModule,
+		MatInputModule,
+		FormsModule,
+	],
 })
 export class ContentComponent {
 	displayedColumns: string[] = [
