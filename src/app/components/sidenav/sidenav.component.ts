@@ -3,12 +3,14 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatSelectModule } from "@angular/material/select";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSidenavModule } from "@angular/material/sidenav";
+import { ContentComponent } from "../content/content.component";
 
 @Component({
 	selector: "app-sidenav",
 	templateUrl: "./sidenav.component.html",
 	styleUrl: "./sidenav.component.scss",
 	imports: [
+		ContentComponent,
 		MatSidenavModule,
 		MatFormFieldModule,
 		MatSelectModule,
