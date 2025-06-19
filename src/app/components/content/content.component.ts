@@ -8,6 +8,7 @@ import { MatTableModule } from "@angular/material/table";
 import { MatTabsModule } from "@angular/material/tabs";
 import { ImageComponent } from "../shared/image/image.component";
 import { NgFor } from "@angular/common";
+import { SurveyComponent } from "../shared/survey/survey.component";
 
 @Component({
 	selector: "app-content",
@@ -23,6 +24,7 @@ import { NgFor } from "@angular/common";
 		MatTabsModule,
 		ImageComponent,
 		NgFor,
+		SurveyComponent,
 	],
 })
 export class ContentComponent {
