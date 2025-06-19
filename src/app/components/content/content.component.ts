@@ -5,6 +5,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { MatTableModule } from "@angular/material/table";
+import { MatTabsModule } from "@angular/material/tabs";
 
 @Component({
 	selector: "app-content",
@@ -17,6 +18,7 @@ import { MatTableModule } from "@angular/material/table";
 		MatSelectModule,
 		MatInputModule,
 		FormsModule,
+		MatTabsModule,
 	],
 })
 export class ContentComponent {
