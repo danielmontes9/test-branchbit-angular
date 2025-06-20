@@ -1,5 +1,12 @@
 <mat-drawer-container>
-  <mat-drawer #drawer [mode]="'over'"></mat-drawer>
+  <mat-drawer #drawer [mode]="'over'">
+    <mat-nav-list>
+      <a mat-list-item>Home</a>
+      <a mat-list-item>About</a>
+      <a mat-list-item>Contact</a>
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+  </mat-drawer>
   <mat-drawer-content>
     <app-content></app-content>
   </mat-drawer-content>

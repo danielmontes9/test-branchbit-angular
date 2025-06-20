@@ -5,6 +5,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatDrawer, MatSidenavModule } from "@angular/material/sidenav";
 import { ContentComponent } from "../content/content.component";
 import { MenuService } from "../../services/menu.service";
+import { MatListModule } from "@angular/material/list";
+import { MatDividerModule } from "@angular/material/divider";
 
 @Component({
 	selector: "app-sidenav",
@@ -16,6 +18,8 @@ import { MenuService } from "../../services/menu.service";
 		MatFormFieldModule,
 		MatSelectModule,
 		MatButtonModule,
+		MatListModule,
+		MatDividerModule,
 	],
 })
 export class SidenavComponent {
