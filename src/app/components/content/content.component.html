@@ -1,43 +1,44 @@
-<table mat-table [dataSource]="userData.data" class="mat-elevation-z8">
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Nombre del Cliente </th>
-    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-  </ng-container>
+<div class="table-container">
+  <table mat-table [dataSource]="userData.data" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre del Cliente </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
 
-  <ng-container matColumnDef="date">
-    <th mat-header-cell *matHeaderCellDef> Fecha de Folio </th>
-    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
-  </ng-container>
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Fecha de Folio </th>
+      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
 
 
-  <ng-container matColumnDef="id_sac">
-    <th mat-header-cell *matHeaderCellDef> Folio SAC </th>
-    <td mat-cell *matCellDef="let element"> {{element.id_sac}} </td>
-  </ng-container>
+    <ng-container matColumnDef="id_sac">
+      <th mat-header-cell *matHeaderCellDef> Folio SAC </th>
+      <td mat-cell *matCellDef="let element"> {{element.id_sac}} </td>
+    </ng-container>
 
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="id_mv">
-    <th mat-header-cell *matHeaderCellDef> Folio MV </th>
-    <td mat-cell *matCellDef="let element"> {{element.id_mv}} </td>
-  </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="id_mv">
+      <th mat-header-cell *matHeaderCellDef> Folio MV </th>
+      <td mat-cell *matCellDef="let element"> {{element.id_mv}} </td>
+    </ng-container>
 
-  <ng-container matColumnDef="registered">
-    <th mat-header-cell *matHeaderCellDef> Registrado </th>
-    <td mat-cell *matCellDef="let element"> {{element.registered}} </td>
-  </ng-container>
+    <ng-container matColumnDef="registered">
+      <th mat-header-cell *matHeaderCellDef> Registrado </th>
+      <td mat-cell *matCellDef="let element"> {{element.registered}} </td>
+    </ng-container>
 
-  <ng-container matColumnDef="actions">
-    <th mat-header-cell *matHeaderCellDef> Actiones </th>
-    <td mat-cell *matCellDef="let element">
-      <button mat-flat-button class="mx-8">Options</button>
-      <button mat-flat-button class="mx-8">Details</button>
-    </td>
-  </ng-container>
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actiones </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-flat-button class="mx-8">Options</button>
+        <button mat-flat-button class="mx-8">Details</button>
+      </td>
+    </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
 
 <div class="container">
   <mat-form-field class="select-expediente">
