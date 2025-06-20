@@ -90,7 +90,11 @@
   </div>
 
   <div class="survey_submit">
-    <button mat-flat-button color="primary" type="submit" (click)="openDialog()">Enviar Encuesta</button>
+    <button
+      [disabled]="!surveyForm.valid"
+      mat-flat-button color="primary" type="submit" (click)="openDialog()">
+      Enviar Encuesta
+    </button>
   </div>
 
 </div>

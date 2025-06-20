@@ -4,6 +4,7 @@ import {
 	FormGroup,
 	FormsModule,
 	ReactiveFormsModule,
+	Validators,
 } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDialog } from "@angular/material/dialog";
@@ -35,13 +36,13 @@ export class SurveyComponent {
 
 	constructor(private _fb: FormBuilder) {
 		this.surveyForm = this._fb.group({
-			q1: [""],
-			q2: [""],
-			q3: [""],
-			q4: [""],
-			answer: [""],
-			reason: [""],
-			comments: [""],
+			q1: ["", [Validators.required]],
+			q2: ["", [Validators.required]],
+			q3: ["", [Validators.required]],
+			q4: ["", [Validators.required]],
+			answer: ["", [Validators.required]],
+			reason: ["", [Validators.required]],
+			comments: ["", [Validators.required]],
 		});
 	}
 
