@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { MenuService } from "../../services/menu.service";
 @Component({
 	selector: "app-navbar",
 	templateUrl: "./navbar.component.html",
@@ -9,7 +10,9 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 	imports: [MatToolbarModule, MatButtonModule, MatIconModule],
 })
 export class NavbarComponent {
-	constructor() {}
+	constructor(private _menuService: MenuService) {}
 
-	openSidenav() {}
+	openSidenav() {
+		this._menuService.open();
+	}
 }
