@@ -1,4 +1,4 @@
-import { Component, effect, ViewChild } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSelectModule } from "@angular/material/select";
 import { MatFormFieldModule } from "@angular/material/form-field";
@@ -19,19 +19,11 @@ import { MenuService } from "../../services/menu.service";
 	],
 })
 export class SidenavComponent {
-	@ViewChild("drawer") drawer!: MatDrawer;
-
-	private _drawerEffect = effect(
-		() => {
-			if (!this.drawer) return;
-			if (this._menuService.isOpen()) {
-				this.drawer.open();
-			} else {
-				this.drawer.close();
-			}
-		},
-		{ allowSignalWrites: true },
-	);
+	@ViewChild("drawer") public drawer!: MatDrawer;
 
 	constructor(private _menuService: MenuService) {}
+
+	ngAfterViewInit() {
+		this._menuService.setSidenav(this.drawer);
+	}
 }

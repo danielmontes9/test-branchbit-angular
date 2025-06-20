@@ -1,20 +1,25 @@
-import { Injectable, signal } from "@angular/core";
+import { Injectable } from "@angular/core";
+import { MatDrawer } from "@angular/material/sidenav";
 
 @Injectable({
 	providedIn: "root",
 })
 export class MenuService {
-	isOpen = signal(false);
+	private sidenav: MatDrawer | null = null;
 
-	open() {
-		this.isOpen.set(true);
+	public setSidenav(sidenav: MatDrawer) {
+		this.sidenav = sidenav;
 	}
 
-	close() {
-		this.isOpen.set(false);
+	public open() {
+		this.sidenav?.open();
 	}
 
-	toggle() {
-		this.isOpen.update((open) => !open);
+	public close() {
+		this.sidenav?.close();
+	}
+
+	public toggle(): void {
+		this.sidenav?.toggle();
 	}
 }
