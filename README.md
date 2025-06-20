@@ -1,6 +1,6 @@
-# TestBranchbitAngular
+# Test Branchbit Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0. It's a technical test for Branchbit.
 
 ## Screenshot
 
