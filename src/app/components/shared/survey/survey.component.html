@@ -1,1 +1,96 @@
-<p>survey works!</p>
+<div class="container" [formGroup]="surveyForm">
+  <div class="survey_section_1">
+    <h3>Selecciona tu respuesta de acuerdo a lo que visualizas en la fotografia:</h3>
+    <div class="survey_question">
+      <label for="q1">¿La digitalización de la ID para este folio está a color?</label>
+      <mat-radio-group formControlName="q1">
+        <mat-radio-button value="si">Sí</mat-radio-button>
+        <mat-radio-button value="no">No</mat-radio-button>
+        <mat-radio-button value="noAplica">No Aplica</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="survey_question">
+      <label for="q2">¿Los datos en ambas ID, expediente y digitalizada coinciden?</label>
+      <mat-radio-group formControlName="q2">
+        <mat-radio-button value="si">Sí</mat-radio-button>
+        <mat-radio-button value="no">No</mat-radio-button>
+        <mat-radio-button value="noAplica">No Aplica</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <div class="survey_external_links">
+    <button mat-fab extended>
+      INE
+    </button>
+    <button mat-fab extended>
+      CURP
+    </button>
+    <button mat-fab extended>
+      SEPOMEX
+    </button>
+    <button mat-fab extended>
+      OTROS
+    </button>
+  </div>
+
+  <div class="survey_section_2">
+    <h3>Selecciona tu respuesta de acuerdo al resultado de tu busqueda:</h3>
+    <div class="survey_question">
+      <label for="q3">¿La información devuelta por tus consultas es vigente?</label>
+      <mat-radio-group formControlName="q3">
+        <mat-radio-button value="si">Sí</mat-radio-button>
+        <mat-radio-button value="no">No</mat-radio-button>
+        <mat-radio-button value="noAplica">No Aplica</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="survey_question">
+      <label for="q4">¿La información devuelta por las consultas coincide con la identificación del cliente?</label>
+      <mat-radio-group formControlName="q4">
+        <mat-radio-button value="si">Sí</mat-radio-button>
+        <mat-radio-button value="no">No</mat-radio-button>
+        <mat-radio-button value="noAplica">No Aplica</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <div class="survey_section_3">
+    <h3>Respuesta de la Solicitud</h3>
+    <div class="survey_question">
+      <label for="answer">Respuesta</label>
+      <mat-form-field>
+        <mat-label>Respuesta</mat-label>
+        <mat-select formControlName="answer">
+          <mat-option value="Aprobada">Aprobada</mat-option>
+          <mat-option value="Rechazada">Rechazada</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="survey_question">
+      <label for="reason">Motivo</label>
+      <mat-form-field>
+        <mat-label>Motivo</mat-label>
+        <mat-select formControlName="reason">
+          <mat-option value="Fotografía del Cliente no Coincide">Fotografía del Cliente no Coincide</mat-option>
+          <mat-option value="Fotografía Borrosa o manipulada">Fotografía Borrosa o manipulada</mat-option>
+          <mat-option value="Fotografía no visible">Fotografía no visible</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="survey_question">
+      <label for="comments">Obvervaciones</label>
+      <mat-form-field formControlName="comments">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="survey_submit">
+    <button mat-flat-button color="primary" type="submit">Enviar Encuesta</button>
+  </div>
+
+</div>

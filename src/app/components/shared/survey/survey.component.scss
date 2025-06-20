@@ -1,0 +1,22 @@
+.container {
+	display: grid;
+	gap: 2.5rem;
+	overflow: hidden;
+}
+
+.survey_question {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.survey_external_links {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+}
+
+.survey_submit {
+	display: flex;
+	justify-content: end;
+}
