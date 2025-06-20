@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSelectModule } from "@angular/material/select";
 import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatDrawer, MatSidenavModule } from "@angular/material/sidenav";
 import { ContentComponent } from "../content/content.component";
 
 @Component({
@@ -17,4 +17,12 @@ import { ContentComponent } from "../content/content.component";
 		MatButtonModule,
 	],
 })
-export class SidenavComponent {}
+export class SidenavComponent {
+	@ViewChild("drawer") drawer!: MatDrawer;
+
+	constructor() {}
+
+	openSidenav() {
+		this.drawer.open();
+	}
+}

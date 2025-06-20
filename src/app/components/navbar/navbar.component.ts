@@ -8,4 +8,8 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 	styleUrl: "./navbar.component.scss",
 	imports: [MatToolbarModule, MatButtonModule, MatIconModule],
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+	constructor() {}
+
+	openSidenav() {}
+}
