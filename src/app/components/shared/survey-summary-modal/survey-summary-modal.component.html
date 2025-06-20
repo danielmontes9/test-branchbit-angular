@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Resumen de tu Solicitud</h2>
+<mat-dialog-content class="mat-typography">
+  <h4>¿La digitalización de la ID para este folio está a color?</h4>
+  <p>{{ data.q1 }}</p>
+
+  <h4>¿Los datos en ambas ID, expediente y digitalizada coinciden?</h4>
+  <p>{{ data.q2 }}</p>
+
+  <h4>¿La información devuelta por tus consultas es vigente?</h4>
+  <p>{{ data.q3 }}</p>
+
+  <h4>¿La información devuelta por las consultas coincide con la identificación del cliente?</h4>
+  <p>{{ data.q4 }}</p>
+
+  <h4>Respuesta de la Solicitud</h4>
+  <p>{{ data.answer }}</p>
+
+  <h4>Motivo</h4>
+  <p>{{ data.reason }}</p>
+
+  <h4>Obvervaciones</h4>
+  <p>{{ data.comments }}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Finalizar</button>
+</mat-dialog-actions>

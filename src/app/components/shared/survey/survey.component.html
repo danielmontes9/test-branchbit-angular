@@ -4,18 +4,18 @@
     <div class="survey_question">
       <label for="q1">¿La digitalización de la ID para este folio está a color?</label>
       <mat-radio-group formControlName="q1">
-        <mat-radio-button value="si">Sí</mat-radio-button>
-        <mat-radio-button value="no">No</mat-radio-button>
-        <mat-radio-button value="noAplica">No Aplica</mat-radio-button>
+        <mat-radio-button value="SI">Sí</mat-radio-button>
+        <mat-radio-button value="NO">No</mat-radio-button>
+        <mat-radio-button value="NO APLICA">No Aplica</mat-radio-button>
       </mat-radio-group>
     </div>
 
     <div class="survey_question">
       <label for="q2">¿Los datos en ambas ID, expediente y digitalizada coinciden?</label>
       <mat-radio-group formControlName="q2">
-        <mat-radio-button value="si">Sí</mat-radio-button>
-        <mat-radio-button value="no">No</mat-radio-button>
-        <mat-radio-button value="noAplica">No Aplica</mat-radio-button>
+        <mat-radio-button value="SI">Sí</mat-radio-button>
+        <mat-radio-button value="NO">No</mat-radio-button>
+        <mat-radio-button value="NO APLICA">No Aplica</mat-radio-button>
       </mat-radio-group>
     </div>
   </div>
@@ -40,18 +40,18 @@
     <div class="survey_question">
       <label for="q3">¿La información devuelta por tus consultas es vigente?</label>
       <mat-radio-group formControlName="q3">
-        <mat-radio-button value="si">Sí</mat-radio-button>
-        <mat-radio-button value="no">No</mat-radio-button>
-        <mat-radio-button value="noAplica">No Aplica</mat-radio-button>
+        <mat-radio-button value="SI">Sí</mat-radio-button>
+        <mat-radio-button value="NO">No</mat-radio-button>
+        <mat-radio-button value="NO APLICA">No Aplica</mat-radio-button>
       </mat-radio-group>
     </div>
 
     <div class="survey_question">
       <label for="q4">¿La información devuelta por las consultas coincide con la identificación del cliente?</label>
       <mat-radio-group formControlName="q4">
-        <mat-radio-button value="si">Sí</mat-radio-button>
-        <mat-radio-button value="no">No</mat-radio-button>
-        <mat-radio-button value="noAplica">No Aplica</mat-radio-button>
+        <mat-radio-button value="SI">Sí</mat-radio-button>
+        <mat-radio-button value="NO">No</mat-radio-button>
+        <mat-radio-button value="NO APLICA">No Aplica</mat-radio-button>
       </mat-radio-group>
     </div>
   </div>
@@ -63,8 +63,8 @@
       <mat-form-field>
         <mat-label>Respuesta</mat-label>
         <mat-select formControlName="answer">
-          <mat-option value="Aprobada">Aprobada</mat-option>
-          <mat-option value="Rechazada">Rechazada</mat-option>
+          <mat-option value="APROBADA">Aprobada</mat-option>
+          <mat-option value="RECHAZADA">Rechazada</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
@@ -90,7 +90,7 @@
   </div>
 
   <div class="survey_submit">
-    <button mat-flat-button color="primary" type="submit">Enviar Encuesta</button>
+    <button mat-flat-button color="primary" type="submit" (click)="openDialog()">Enviar Encuesta</button>
   </div>
 
 </div>
